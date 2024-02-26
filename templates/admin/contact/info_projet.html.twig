@@ -1,0 +1,19 @@
+<tr>
+    <td class="col-80">
+        <div class="text-center">
+            <p>
+                <span>Nom :</span> 
+                    {{prs ? pr.name : "" }}
+            </p>
+        </div>
+        <p>
+            <span>Contacter le bar {{prs ? pr.name : "" }} à </span>
+                {{ prs ? pr.city : "" }} pour demande de fut!
+        </p>
+        <p>
+            <span>Message :</span>
+            <p>
+                <a target="blank" href="mailto:{{pr.email}}">{{ prs ? pr.email : "" }}</a>
+            </p>
+        </p>
+    </td>

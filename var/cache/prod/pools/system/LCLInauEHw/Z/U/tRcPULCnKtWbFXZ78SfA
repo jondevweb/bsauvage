@@ -1,0 +1,87 @@
+<?php //fb02cd11aa842dbee875a79750463b2d
+
+return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+    $o = [
+        clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Doctrine\\ORM\\Query\\ParserResult'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\ParserResult')),
+        clone ($p['Doctrine\\ORM\\Query\\Exec\\SingleSelectExecutor'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\Exec\\SingleSelectExecutor')),
+        clone ($p['Doctrine\\ORM\\Query\\ResultSetMapping'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\ResultSetMapping')),
+    ],
+    null,
+    [
+        'Doctrine\\ORM\\Query\\ParserResult' => [
+            '_sqlExecutor' => [
+                $o[1],
+            ],
+            '_resultSetMapping' => [
+                $o[2],
+            ],
+            '_parameterMappings' => [
+                [
+                    'val' => [
+                        0,
+                    ],
+                ],
+            ],
+        ],
+        'Doctrine\\ORM\\Query\\Exec\\AbstractSqlExecutor' => [
+            '_sqlStatements' => [
+                1 => 'SELECT s0_.id AS id_0, s0_.order_status AS order_status_1, s0_.order_date AS order_date_2, s0_.shipping_date AS shipping_date_3, s0_.price_order AS price_order_4, s0_.user_id AS user_id_5, s0_.email_user_id AS email_user_id_6 FROM shop s0_ WHERE s0_.price_order = ?',
+            ],
+        ],
+        'stdClass' => [
+            'aliasMap' => [
+                2 => [
+                    's' => 'App\\Entity\\Shop',
+                ],
+            ],
+            'fieldMappings' => [
+                2 => [
+                    'id_0' => 'id',
+                    'order_status_1' => 'order_status',
+                    'order_date_2' => 'order_date',
+                    'shipping_date_3' => 'shipping_date',
+                    'price_order_4' => 'price_order',
+                ],
+            ],
+            'typeMappings' => [
+                2 => [
+                    'user_id_5' => 'integer',
+                    'email_user_id_6' => 'integer',
+                ],
+            ],
+            'entityMappings' => [
+                2 => [
+                    's' => null,
+                ],
+            ],
+            'metaMappings' => [
+                2 => [
+                    'user_id_5' => 'user_id',
+                    'email_user_id_6' => 'email_user_id',
+                ],
+            ],
+            'columnOwnerMap' => [
+                2 => [
+                    'id_0' => 's',
+                    'order_status_1' => 's',
+                    'order_date_2' => 's',
+                    'shipping_date_3' => 's',
+                    'price_order_4' => 's',
+                    'user_id_5' => 's',
+                    'email_user_id_6' => 's',
+                ],
+            ],
+            'declaringClasses' => [
+                2 => [
+                    'id_0' => 'App\\Entity\\Shop',
+                    'order_status_1' => 'App\\Entity\\Shop',
+                    'order_date_2' => 'App\\Entity\\Shop',
+                    'shipping_date_3' => 'App\\Entity\\Shop',
+                    'price_order_4' => 'App\\Entity\\Shop',
+                ],
+            ],
+        ],
+    ],
+    $o[0],
+    []
+); }];

@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block body2 %}
+    <div class="container">
+        <h4>Messages reçus</h4>
+        <h5 class="text-center"> {{ contacts|length }} message{{ contacts|length > 1 ? 's' : ''}} contact + {{ prs|length }} demande{{ prs|length > 1 ? 's' : ''}} de futs</h5>
+        {% if is_granted("ROLE_ADMIN") %}
+        {{ include('message/message_alert.html.twig') }}
+        <div class="contactTable">
+            <table class="col-0">
+                {{ include('admin/contact/table_head_contact.html.twig') }}
+                <tbody>
+                {% if contacts %}
+                    {% for contact in contacts %}
+                        {{ include('admin/contact/info_contact.html.twig') }}
+                        {{ include('admin/contact/modif_contact.html.twig') }}
+                    {% endfor %}
+                {% endif %}
+                {% if prs %}
+                    {% for pr in prs %}
+                        {{ include('admin/contact/info_projet.html.twig') }}
+                        {{ include('admin/contact/modif_projet.html.twig') }}
+                    {% endfor %}
+                {% endif %}
+                </tbody>
+            </table>
+        </div>
+        {% endif %}
+    </div>
+{% endblock %}

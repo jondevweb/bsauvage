@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block body2 %} 
+    <div class="container">
+        <div id="brasseriePresent">
+            <h2>Contact</h2>
+            {{ include('message/message_alert.html.twig') }}
+            <div class="flex" id="fColumn">
+                {{ include('contact/lien.html.twig') }}
+                <div class="col-2">
+                    <img src="{{ asset('img/local.png') }}" alt="">
+                </div>
+            </div>
+            <div class="text-center">
+                <h3>Formulez votre demande. Réponse dans les 72h</h3>
+                {{ form(formContact)}}
+            </div>
+        </div>
+    </div>
+{% endblock %}

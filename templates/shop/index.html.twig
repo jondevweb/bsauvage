@@ -1,0 +1,28 @@
+
+{% extends 'base.html.twig' %}
+
+{% block body2 %} 
+    <div class="container">
+        <div id="carrePlus">0</div>
+        <div id="shopPresent">
+            <h2>Boutique</h2>
+            {% if beers is defined %}
+            <h5>{{ beers|length }} bière{{ beers|length > 1 ? 's' : ''}} en vente.</h5>
+            {% endif %}
+            <div>
+                {{ include('message/message_alert.html.twig') }}
+            </div> 
+            <div>
+            {% if beers is defined %}
+            {% for beer in beers %}
+                {% if beer.quantity > 0 %}
+                {{ include('shop/info_shop_beer.html.twig') }}
+                {% endif %}
+            {% endfor %}
+            {% endif %}
+            </div>
+        </div>
+                        
+        {{ include('shop/basket_shop.html.twig') }}
+    </div>
+{% endblock %}

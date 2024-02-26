@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block body2 %} 
+    <div class="container">
+        <div id="carrePlus">0</div>
+        <div id="beerPresent">
+            <h2>Nos Bières</h2>
+            {% if beers is defined %}
+            {% for beer in beers %}
+                <div id="beer{{ beer.id }}" class="flex text-center blocBP">
+                    {{ include('beer/info_beer.html.twig') }}
+                        {{ include('beer/basket_price.html.twig') }}
+                    </div>
+                </div>
+            {% endfor %}
+            {% endif %}   
+        </div>
+    </div>
+{% endblock %}

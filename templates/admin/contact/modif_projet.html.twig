@@ -1,0 +1,19 @@
+    <td class="modifProjet">
+        <a id="deleteProjet{{pr.id}}" href="">
+            <img src="{{ asset('img/sup.png') }}" alt="">
+        </a>
+    </td>
+</tr>
+<tr class="col-0">
+    <td colspan="2" class="col-0 modHide" id="supProjet">
+        <div class="modal2 text-center pAbsolute zI6" id="modalPt{{ pr.id }}">
+            <p>Voulez-vous vraiment supprimer le message concernant "{{ pr.name }}" de {{ pr.email }} ?</p>
+            <a id="okpt{{ pr.id }}" href="{{ path('app_admin_projet_delete', {id: pr.id }) }}">
+                <p>Oui</p>
+            </a>
+            <a id="nopt{{ pr.id }}">
+                <p>Non</p>
+            </a>
+        </div>
+    </td>
+</tr>

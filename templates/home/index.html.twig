@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+{% block javascripts %}
+    {{ encore_entry_script_tags('Home') }}
+</head> 
+{% endblock %}  
+
+{% block beforeBody %}
+    {{ include("modal/alcoholWarning.html.twig") }}     
+    {{ include("canette/canette.html.twig") }}   
+    <div id="white" class="zI4">
+{% endblock %}
+{% block endHeader %}   
+    </div>
+{% endblock %}
+{% block body %}
+    {{ include("titleAnimation/tAnim.html.twig") }}
+    {{ include("button/button.html.twig") }}
+{% endblock %}
+{% block body2 %}
+    {{ include("bannerBeer/index.html.twig") }}
+    {{ include("actuality/actuality.html.twig") }}
+{% endblock %}
